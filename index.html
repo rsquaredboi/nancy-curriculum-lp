@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>The Second Curriculum — by Nancy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FF30CC; --pink-soft:#FFE3F7; --pink-deep:#E019AF;
+    --lime:#CCFD28; --ink:#1A1A1A; --ink-soft:#6E6660;
+    --cream:#FCF7ED; --line:#EFE4D2; --plum:#7A4E8C; --plum-soft:#F3EBF7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Rubik',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:'Fraunces',serif;line-height:1.18}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  .wide{max-width:960px;margin:0 auto;padding:0 22px}
+  section{padding:64px 0}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:14px}
+
+  /* header */
+  header{display:flex;justify-content:center;align-items:center;gap:14px;padding:26px 16px 6px}
+  header img{height:40px}
+  .badge{background:var(--lime);border:1px solid #b8e620;font-size:12.5px;font-weight:600;border-radius:999px;padding:6px 14px}
+
+  /* hero */
+  .hero{text-align:center;padding:52px 0 58px}
+  .hero h1{font-size:clamp(34px,6vw,54px);font-weight:600;max-width:800px;margin:0 auto 22px}
+  .hero .sub{font-size:19px;color:var(--ink-soft);max-width:620px;margin:0 auto 30px}
+  .hero .sub b{color:var(--ink)}
+  .btn{display:inline-block;background:var(--pink);color:#fff;border:none;cursor:pointer;font-family:'Rubik',sans-serif;font-weight:600;font-size:16.5px;border-radius:999px;padding:17px 38px;text-decoration:none;transition:background .15s}
+  .btn:hover{background:var(--pink-deep)}
+  .micro{font-size:13px;color:var(--ink-soft);margin-top:14px;font-style:italic}
+
+  /* letter section */
+  .letter{background:#fff}
+  .letter h2{font-size:clamp(26px,4.4vw,36px);font-weight:600;margin-bottom:22px}
+  .letter p{font-size:17px;margin-bottom:20px}
+  .letter p.big{font-size:19px}
+
+  /* verbatims */
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}
+  @media(max-width:600px){.quotes{grid-template-columns:1fr}}
+  .q{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:20px 22px;font-size:15.5px;font-style:italic}
+  .q .who{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--plum);margin-top:10px;text-transform:uppercase}
+  .q.hl{background:var(--plum-soft);border-color:var(--plum);grid-column:1/-1;font-size:18px;text-align:center;padding:26px}
+
+  /* curriculum */
+  .parts{display:grid;gap:18px;margin-top:36px}
+  .part{background:#fff;border:1.5px solid var(--line);border-radius:20px;overflow:hidden}
+  .part summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:baseline;gap:16px}
+  .part summary::-webkit-details-marker{display:none}
+  .part .no{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--pink-deep);white-space:nowrap}
+  .part h3{font-size:22px;font-weight:600}
+  .part .tag{font-size:13.5px;color:var(--ink-soft);margin-top:3px}
+  .part .toggle{margin-left:auto;font-size:22px;color:var(--pink-deep);transition:transform .2s}
+  .part[open] .toggle{transform:rotate(45deg)}
+  .lessons{padding:0 28px 24px;border-top:1px dashed var(--line)}
+  .lessons li{list-style:none;padding:13px 0;border-bottom:1px solid var(--line);font-size:15.5px;display:flex;gap:12px}
+  .lessons li:last-child{border-bottom:none}
+  .lessons .n{color:var(--pink-deep);font-weight:700;font-family:'Fraunces',serif;min-width:22px}
+  .asked{font-size:12.5px;color:var(--plum);background:var(--plum-soft);border-radius:999px;padding:2px 10px;margin-left:auto;white-space:nowrap;align-self:center}
+  @media(max-width:540px){.asked{display:none}}
+
+  /* faculty */
+  .faculty{background:#fff}
+  .fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+  @media(max-width:700px){.fac-grid{grid-template-columns:1fr}}
+  .fac{background:var(--cream);border:1.5px solid var(--line);border-radius:18px;padding:26px 22px;text-align:center}
+  .fac .avatar{width:64px;height:64px;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);font-family:'Fraunces',serif;font-size:24px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+  .fac h3{font-size:18px;margin-bottom:4px}
+  .fac .role{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:10px}
+  .fac p{font-size:14px;color:var(--ink-soft)}
+  .chorus{margin-top:16px;background:var(--plum-soft);border:1px dashed var(--plum);border-radius:18px;padding:22px;text-align:center;font-size:15px}
+  .trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+  .trustbar span{font-size:13px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 15px}
+
+  /* format */
+  .fmt{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+  @media(max-width:600px){.fmt{grid-template-columns:1fr}}
+  .fmt div{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:20px 22px;font-size:15px}
+  .fmt b{display:block;font-size:16px;margin-bottom:4px}
+  .fmt .why{font-size:13px;color:var(--ink-soft);font-style:italic;margin-top:6px}
+
+  /* pricing */
+  .founding{background:var(--lime);border-radius:22px;padding:34px 30px;text-align:center;margin-bottom:26px}
+  .founding h3{font-size:26px;margin-bottom:10px}
+  .founding p{font-size:15.5px;max-width:560px;margin:0 auto 20px}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.price-grid{grid-template-columns:1fr}}
+  .price{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:30px 28px}
+  .price.main{border-color:var(--pink-deep);box-shadow:0 0 0 1px var(--pink-deep)}
+  .price h3{font-size:20px;margin-bottom:2px}
+  .price .amount{font-family:'Fraunces',serif;font-size:40px;font-weight:600;color:var(--pink-deep)}
+  .price .per{font-size:13px;color:var(--ink-soft);margin-bottom:14px}
+  .price ul{margin:0 0 22px;padding:0}
+  .price li{list-style:none;font-size:14.5px;padding:6px 0 6px 24px;position:relative}
+  .price li::before{content:'✓';position:absolute;left:0;color:var(--pink-deep);font-weight:700}
+  .price .btn{width:100%;text-align:center;font-size:15px;padding:14px}
+  .btn.ghost{background:#fff;color:var(--pink-deep);border:1.5px solid var(--pink-deep)}
+  .btn.ghost:hover{background:var(--pink-soft)}
+  .btn.dark{background:var(--ink);color:#fff}
+  .btn.dark:hover{background:#000}
+
+  /* faq */
+  .faq details{background:#fff;border:1.5px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0 22px}
+  .faq summary{list-style:none;cursor:pointer;font-weight:600;font-size:15.5px;padding:18px 0}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq p{font-size:14.5px;color:var(--ink-soft);padding-bottom:18px}
+
+  /* closer */
+  .closer{text-align:center;padding:80px 0}
+  .closer h2{font-size:clamp(28px,5vw,42px);font-weight:600;max-width:640px;margin:0 auto 18px}
+  .closer p{font-size:17px;color:var(--ink-soft);max-width:540px;margin:0 auto 30px}
+
+  footer{text-align:center;font-size:12.5px;color:var(--ink-soft);padding:30px 20px 46px}
+  footer a{color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="nancy-logo.png" alt="Nancy">
+  <div class="badge">🍋 Built from 1,062 women’s real questions</div>
+</header>
+
+<!-- HERO -->
+<div class="hero wrap">
+  <h1>Sex ed ended at fifteen. Right before the part where it gets complicated.</h1>
+  <p class="sub"><b>This is The Second Curriculum</b> — 16 honest lessons on orgasm, desire, and your body as it is now. Answered by experts. Commissioned by 1,062 women who were done not asking.</p>
+  <a class="btn" href="#curriculum">Show me the curriculum ↓</a>
+  <div class="micro">Private by design. Nothing on your screen you’d have to explain.</div>
+</div>
+
+<!-- ORIGIN LETTER -->
+<section class="letter">
+  <div class="wrap">
+    <div class="kicker">How this started</div>
+    <h2>Three weeks ago, we asked 1,062 of our customers one question.</h2>
+    <p class="big">Not “rate your order.” We asked: <em>what do you actually want to know about sex that nobody will tell you?</em></p>
+    <p>They sent back <b>738 questions</b> that had clearly been waiting years for a safe place to be asked:</p>
+
+    <div class="quotes">
+      <div class="q">“Why does orgasm take longer and longer — and why will nobody explain it?”<span class="who">— survey respondent, 55+</span></div>
+      <div class="q">“Is my antidepressant the reason I can’t finish?”<span class="who">— survey respondent, 45–54</span></div>
+      <div class="q">“I’m on HRT and got my libido back. But it doesn’t help the brain. What helps the brain?”<span class="who">— survey respondent, 45–54</span></div>
+      <div class="q">“Is sex over for me?”<span class="who">— survey respondent, 55+</span></div>
+      <div class="q hl">“Why do I need to ask an expert? Why can’t I find out these things by myself?”<span class="who">— the question that became this program</span></div>
+    </div>
+
+    <p>She can’t. We checked what’s out there. Medical pages that describe your body like a diagnosis. Content that’s basically porn. Advice written for 25-year-olds, about bodies that behave like 25-year-old bodies.</p>
+    <p><b>4 in 10</b> of the women we surveyed said they can’t tell what’s credible and what’s nonsense. <b>1 in 5</b> have never dared to search at all.</p>
+    <p>So sex education just… stops. One embarrassed unit of it at fifteen, built entirely around preventing things. Then the curriculum ends — right before the decades where your body changes the most, the questions get genuinely hard, and the answers genuinely exist.</p>
+    <p class="big"><b>This is the second curriculum. The one that should have existed all along.</b></p>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="wide">
+    <div class="kicker" style="text-align:center">The program</div>
+    <h2 style="text-align:center;font-size:clamp(26px,4.4vw,36px)">Sixteen lessons. Every one exists because you asked for it.</h2>
+    <p style="text-align:center;color:var(--ink-soft);margin-top:10px">Your votes decided this list — not a content calendar.</p>
+
+    <div class="parts">
+      <details class="part" open>
+        <summary>
+          <span class="no">PART I</span>
+          <span><h3>Your Body, Now</h3><div class="tag">The re-introduction nobody gave you</div></span>
+          <span class="toggle">+</span>
+        </summary>
+        <ul class="lessons">
+          <li><span class="n">1</span> What actually changed — and what helps</li>
+          <li><span class="n">2</span> The anatomy you were never taught</li>
+          <li><span class="n">3</span> Comfort first: dryness and pain, solved kindly <span class="asked">55 of you asked</span></li>
+          <li><span class="n">4</span> HRT, hormones & your medications — what they do and don’t fix</li>
+        </ul>
+      </details>
+
+      <details class="part">
+        <summary>
+          <span class="no">PART II</span>
+          <span><h3>The Orgasm Work</h3><div class="tag">The part most of you came for</div></span>
+          <span class="toggle">+</span>
+        </summary>
+        <ul class="lessons">
+          <li><span class="n">5</span> Why orgasm gets harder with age — and what works <span class="asked">45 of you asked</span></li>
+          <li><span class="n">6</span> Stronger, deeper orgasms <span class="asked">#1 most-requested lesson</span></li>
+          <li><span class="n">7</span> The G-spot, squirting & what your body can really do</li>
+          <li><span class="n">8</span> Staying present — shutting off the mental to-do list</li>
+        </ul>
+      </details>
+
+      <details class="part">
+        <summary>
+          <span class="no">PART III</span>
+          <span><h3>Desire</h3><div class="tag">Wanting to want it again</div></span>
+          <span class="toggle">+</span>
+        </summary>
+        <ul class="lessons">
+          <li><span class="n">9</span> Why desire fades <span class="asked">87 of you asked</span></li>
+          <li><span class="n">10</span> Rebuilding the relationship with your own desire</li>
+          <li><span class="n">11</span> Stress, meds & hormones vs. your libido</li>
+          <li><span class="n">12</span> Desire & orgasm after 50</li>
+        </ul>
+      </details>
+
+      <details class="part">
+        <summary>
+          <span class="no">PART IV</span>
+          <span><h3>Together</h3><div class="tag">For the two of you — even after twenty years</div></span>
+          <span class="toggle">+</span>
+        </summary>
+        <ul class="lessons">
+          <li><span class="n">13</span> Mismatched drives, without the blame</li>
+          <li><span class="n">14</span> Saying it out loud: communication that isn’t cringe</li>
+          <li><span class="n">15</span> His side: his body, his changes — without making it weird</li>
+          <li><span class="n">16</span> Reigniting a long marriage</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section class="faculty">
+  <div class="wide">
+    <div class="kicker" style="text-align:center">Who teaches it</div>
+    <h2 style="text-align:center;font-size:clamp(26px,4.4vw,36px)">Experts for the facts. Women like you for the honesty.</h2>
+    <p style="text-align:center;color:var(--ink-soft);max-width:600px;margin:12px auto 0">64% of you told us you don’t want a lecture from an authority <em>or</em> a confession from a stranger. You want both. So every lesson has two voices.</p>
+
+    <div class="fac-grid">
+      <div class="fac">
+        <div class="avatar">Dr</div>
+        <h3>The Doctor</h3>
+        <div class="role">Your body & desire · Parts I & III</div>
+        <p>A physician who specializes in exactly this stage of life. Every lesson medically reviewed — in plain language, never jargon.</p>
+      </div>
+      <div class="fac">
+        <div class="avatar">C</div>
+        <h3>The Coach</h3>
+        <div class="role">Technique & together · Parts II & IV</div>
+        <p>An intimacy coach — practical, funny, unembarrassable. The scripts, the techniques, the things you can actually try this week.</p>
+      </div>
+      <div class="fac">
+        <div class="avatar">P</div>
+        <h3>The Physio</h3>
+        <div class="role">The mechanics nobody mentions</div>
+        <p>A pelvic floor physiotherapist for the body-mechanics side — because 130 of you asked, and good ones are hard to find.</p>
+      </div>
+    </div>
+
+    <div class="chorus">🍋 <b>And the chorus: 1,062 women like you.</b> Their real, anonymous words run through every lesson — what they tried, what worked, what they wish they’d known sooner.</div>
+
+    <div class="trustbar">
+      <span>Medically reviewed</span>
+      <span>Zero jargon</span>
+      <span>Judgment-free, from zero</span>
+      <span>We banned the word “atrophy” — a customer asked; we agreed</span>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAT -->
+<section>
+  <div class="wide">
+    <div class="kicker" style="text-align:center">How it works</div>
+    <h2 style="text-align:center;font-size:clamp(26px,4.4vw,36px)">Built the way you told us to build it.</h2>
+    <div class="fmt">
+      <div><b>📖 Written first</b> Proper 15–20 minute lessons you can read silently, anywhere.<div class="why">You chose reading over video — so that’s what we made.</div></div>
+      <div><b>🎧 Audio for everything</b> Sounds like a podcast. Nothing on your screen.<div class="why">239 of you asked for exactly this.</div></div>
+      <div><b>🎬 A short private video per lesson</b> For at home. Neutral thumbnails, always.</div>
+      <div><b>✅ One thing to try each week</b> Practical steps, not theory — your #1 request.</div>
+      <div><b>🔒 Discreet everywhere</b> Inbox subject lines your seatmate could read. Discreet billing too.</div>
+      <div><b>🍋 Yours forever</b> Buy once, own it always. You told us you’re done with subscriptions. Same.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="padding-top:20px">
+  <div class="wide">
+    <div class="founding">
+      <h3>🍋 Founding members: you wrote the syllabus.</h3>
+      <p>If you joined the founding list through our survey, the complete curriculum is <b>$49, lifetime</b> — a price that never comes back — and your replies to the early lessons shape the final ones. Check your inbox for your founding link.</p>
+      <a class="btn dark" href="#">I’m on the founding list</a>
+    </div>
+
+    <div class="price-grid">
+      <div class="price main">
+        <h3>The Complete Curriculum</h3>
+        <div class="amount">$79</div>
+        <div class="per">once — own it forever</div>
+        <ul>
+          <li>All 16 lessons, all four parts</li>
+          <li>Written + audio + private video, every lesson</li>
+          <li>The full “You Asked” answer bank</li>
+          <li>Every future update included</li>
+          <li>No subscription. Ever.</li>
+        </ul>
+        <a class="btn" href="#">Get the curriculum</a>
+      </div>
+      <div class="price">
+        <h3>Single Guides</h3>
+        <div class="amount">$29</div>
+        <div class="per">each — just the part you need</div>
+        <ul>
+          <li>The Orgasm Work</li>
+          <li>Comfort: your body, now</li>
+          <li>Desire: wanting to want it</li>
+          <li>Together: for the two of you</li>
+        </ul>
+        <a class="btn ghost" href="#">Choose a guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" style="padding-top:20px">
+  <div class="wrap">
+    <h2 style="font-size:26px;margin-bottom:22px">Questions we’d ask too</h2>
+    <details><summary>Is this medical advice?</summary><p>No — it’s education, reviewed by a physician who specializes in this stage of life. For diagnosis or treatment, see your clinician. (Lesson 4 even gives you the exact questions worth asking them.)</p></details>
+    <details><summary>Is it explicit?</summary><p>It’s honest, not graphic. Warm, direct, and grown-up — the way a knowledgeable friend would actually talk to you.</p></details>
+    <details><summary>Will anyone know?</summary><p>Discreet billing, discreet subject lines, no autoplaying video, downloadable audio. Built for privacy from the first click.</p></details>
+    <details><summary>What if it’s not for me?</summary><p>Every purchase is covered by Nancy’s Pleasure Guarantee — if a guide or the curriculum isn’t right for you, we’ll make it right with an exchange or store credit. Full terms at checkout.</p></details>
+    <details><summary>Do I need any products to follow along?</summary><p>No. A few lessons mention tools that can help, and where they do, the advice stands on its own without them.</p></details>
+  </div>
+</section>
+
+<!-- CLOSER -->
+<div class="closer wrap">
+  <h2>The curriculum you never got is finally being written.</h2>
+  <p>By 1,062 women who decided the silence was the problem. Their questions. Real answers. Your pace, your privacy, your stage of life.</p>
+  <a class="btn" href="#pricing">Start with lesson one →</a>
+</div>
+
+<footer>
+  © Nancy · Education, honestly · <a href="https://hellonancy.com">hellonancy.com</a><br>
+  Survey statistics from 1,062 customer responses, August 2026. Verbatims shared anonymously, as promised.
+</footer>
+
+</body>
+</html>

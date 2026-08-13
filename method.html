@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>The Second Curriculum — Nancy School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FF30CC; --pink-soft:#FFE3F7; --pink-deep:#E019AF;
+    --lime:#CCFD28; --ink:#1A1A1A; --ink-soft:#6E6660;
+    --cream:#FCF7ED; --line:#EFE4D2; --plum:#7A4E8C; --plum-soft:#F3EBF7;
+    --good:#1a7f37; --bad:#b42318;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Rubik',sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:16.5px}
+  h1,h2,h3{font-family:'Fraunces',serif;line-height:1.2}
+  .container{max-width:660px;margin:0 auto;padding:0 20px}
+  h2{font-size:clamp(24px,4.2vw,31px);font-weight:600;text-align:center;margin:54px 0 18px}
+  p{margin-bottom:16px}
+  .hl{background:linear-gradient(transparent 55%, var(--pink-soft) 55%)}
+
+  .bar{background:var(--ink);color:#fff;text-align:center;font-size:13.5px;font-weight:600;padding:10px 14px}
+  .bar b{color:var(--lime)}
+
+  .masthead{text-align:center;padding:26px 0 6px}
+  .masthead img{height:36px}
+  .masthead .school{font-family:'Fraunces',serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink-deep);margin-top:6px}
+
+  .eyebrow{text-align:center;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-deep);margin:22px 0 12px}
+  h1{font-size:clamp(28px,5vw,40px);font-weight:600;text-align:center;margin-bottom:16px}
+  .deck{text-align:center;font-size:18px;color:var(--ink-soft);margin-bottom:26px}
+
+  .vsl{background:var(--ink);border-radius:18px;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;margin:0 0 8px;cursor:pointer}
+  .vsl .play{width:74px;height:74px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:14px}
+  .vsl .cap{font-size:14px;color:#ddd;padding:0 30px;text-align:center;font-style:italic}
+  .vsl-note{text-align:center;font-size:12.5px;color:var(--ink-soft);margin-bottom:30px}
+
+  .problem-fix{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+  @media(max-width:620px){.problem-fix{grid-template-columns:1fr}}
+  .pf{border-radius:16px;padding:22px}
+  .pf h4{font-family:'Rubik',sans-serif;font-size:15.5px;margin-bottom:12px}
+  .pf ul{list-style:none}
+  .pf li{padding:8px 0 8px 26px;position:relative;font-size:14.5px;border-bottom:1px dashed rgba(0,0,0,.07)}
+  .pf li:last-child{border-bottom:none}
+  .problem{background:#FDF3F2;border:1px solid #F5D9D5}
+  .problem li::before{content:'✕';position:absolute;left:2px;color:var(--bad);font-weight:700}
+  .fix{background:#F3FAF3;border:1px solid #D8EDD8}
+  .fix li::before{content:'✓';position:absolute;left:2px;color:var(--good);font-weight:700}
+
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
+  @media(max-width:560px){.stat-row{grid-template-columns:1fr}}
+  .stat{background:var(--cream);border:1.5px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+  .stat .n{font-family:'Fraunces',serif;font-size:30px;font-weight:700;color:var(--pink-deep)}
+  .stat .l{font-size:12.5px;color:var(--ink-soft)}
+
+  .price-block{background:var(--cream);border:2px solid var(--pink-deep);border-radius:20px;padding:26px;text-align:center;margin:30px 0 8px}
+  .price-block .was{font-size:15px;color:var(--ink-soft);text-decoration:line-through}
+  .price-block .now{font-family:'Fraunces',serif;font-size:44px;font-weight:700;color:var(--pink-deep);line-height:1.1}
+  .price-block .terms{font-size:13px;color:var(--ink-soft);margin-top:4px}
+  .cta{display:block;background:var(--pink);color:#fff;text-decoration:none;text-align:center;font-weight:700;font-size:17px;border-radius:999px;padding:18px 30px;margin:16px 0 6px;transition:background .15s;box-shadow:0 8px 24px rgba(255,48,204,.35)}
+  .cta:hover{background:var(--pink-deep)}
+  .cta small{display:block;font-weight:500;font-size:12.5px;margin-top:5px;opacity:.9}
+  .under-cta{text-align:center;font-size:13px;color:var(--ink-soft);margin-bottom:26px}
+
+  .quote{background:var(--plum-soft);border-left:4px solid var(--plum);border-radius:0 14px 14px 0;padding:18px 20px;margin:14px 0;font-style:italic;font-size:15.5px}
+  .quote .who{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--plum);margin-top:8px}
+
+  .mechanism{background:var(--cream);border:1.5px solid var(--line);border-radius:18px;padding:26px;margin:20px 0}
+  .mechanism h3{font-size:19px;margin-bottom:10px}
+
+  .path{counter-reset:step;margin:24px 0}
+  .step{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .step .num{counter-increment:step;flex-shrink:0;width:44px;height:44px;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);font-family:'Fraunces',serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center}
+  .step .num::before{content:counter(step)}
+  .step h3{font-size:18px;margin-bottom:4px}
+  .step p{font-size:14.5px;color:var(--ink-soft);margin:0}
+  .step .lessons{font-size:12.5px;color:var(--plum);margin-top:6px}
+
+  .receipts{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:24px;margin:20px 0}
+  .receipts li{list-style:none;padding:9px 0 9px 30px;position:relative;font-size:15px;border-bottom:1px solid var(--line)}
+  .receipts li:last-child{border-bottom:none}
+  .receipts li::before{content:'🍋';position:absolute;left:0}
+
+  .notfor{background:#FDF3F2;border:1px solid #F5D9D5;border-radius:18px;padding:24px;margin:20px 0}
+  .notfor li{list-style:none;padding:8px 0 8px 26px;position:relative;font-size:15px}
+  .notfor li::before{content:'→';position:absolute;left:2px;color:var(--bad);font-weight:700}
+
+  .guarantee{background:#F3FAF3;border:2px dashed var(--good);border-radius:18px;padding:26px;text-align:center;margin:24px 0}
+  .guarantee h3{font-size:20px;color:var(--good);margin-bottom:10px}
+
+  .stack{margin:20px 0}
+  .stack li{list-style:none;display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .stack li b:last-child{white-space:nowrap;color:var(--ink-soft);font-weight:600}
+  .stack li:last-child{border-bottom:none}
+
+  details.faq{background:var(--cream);border:1.5px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0 20px}
+  details.faq summary{list-style:none;cursor:pointer;font-weight:600;font-size:15.5px;padding:16px 0}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq .a{font-size:14.5px;color:var(--ink-soft);padding-bottom:16px}
+
+  #submit-form{background:var(--cream);border:2px solid var(--pink-deep);border-radius:22px;padding:30px;margin:34px 0}
+  #submit-form h2{margin-top:0}
+  #submit-form input[type=email]{width:100%;border:1.5px solid var(--line);border-radius:13px;padding:15px 16px;font-size:15.5px;font-family:'Rubik',sans-serif;margin-bottom:12px;outline:none}
+  #submit-form input[type=email]:focus{border-color:var(--pink-deep)}
+  #submit-form button{width:100%;background:var(--pink);color:#fff;border:none;cursor:pointer;font-family:'Rubik',sans-serif;font-weight:700;font-size:17px;border-radius:999px;padding:17px}
+  #submit-form button:hover{background:var(--pink-deep)}
+  .form-note{font-size:12.5px;color:var(--ink-soft);text-align:center;margin-top:10px}
+
+  footer{text-align:center;font-size:12.5px;color:var(--ink-soft);padding:36px 20px 50px}
+</style>
+</head>
+<body>
+
+<div class="bar">FOUNDING COHORT PRICING — <b>$49 lifetime</b> (goes to $79 when the first cohort closes) · built with 1,062 women</div>
+
+<div class="masthead">
+  <img src="nancy-logo.png" alt="Nancy">
+  <div class="school">Nancy School</div>
+</div>
+
+<div class="container">
+
+  <p class="eyebrow">For women who were done not asking</p>
+  <h1>1,062 Women Told Us What Nobody Would Answer About Sex After 40. <span class="hl">This Curriculum Is The Answers.</span></h1>
+  <p class="deck">16 honest lessons on orgasm, desire, and your body as it is now — written from 738 real questions, answered with experts, medically reviewed, and delivered so privately your phone won't even give you away.</p>
+
+  <p style="text-align:center;font-weight:700">⬇ Watch This To Learn More ⬇</p>
+  <div class="vsl" title="VSL placeholder">
+    <div class="play">▶</div>
+    <div class="cap">"Sex ed ended at fifteen. Right before the part where it gets complicated."</div>
+  </div>
+  <p class="vsl-note">3-minute video · nothing explicit, safe to watch anywhere</p>
+
+  <div class="stat-row">
+    <div class="stat"><div class="n">1,062</div><div class="l">women surveyed — they chose every lesson</div></div>
+    <div class="stat"><div class="n">738</div><div class="l">real questions answered inside</div></div>
+    <div class="stat"><div class="n">16</div><div class="l">lessons · read, listen, or watch</div></div>
+  </div>
+
+  <h2>Why This Is Different From Everything You've Found At 2am</h2>
+  <div class="problem-fix">
+    <div class="pf problem">
+      <h4>🚫 What's out there now:</h4>
+      <ul>
+        <li>Medical pages that describe your body like a <b>diagnosis</b> — one of our customers asked us to ban the word "atrophy." We did.</li>
+        <li>Content that's <b>basically porn</b> — performance, not information.</li>
+        <li>Advice written for <b>25-year-olds</b>, about bodies that behave like 25-year-old bodies.</li>
+        <li>No way to tell <b>what's credible</b> — 4 in 10 women we surveyed said exactly this.</li>
+      </ul>
+    </div>
+    <div class="pf fix">
+      <h4>✅ How The Second Curriculum fixes it:</h4>
+      <ul>
+        <li><b>Your questions decided the syllabus</b> — every lesson exists because enough of you asked for it.</li>
+        <li><b>Experts answer, real women verify</b> — the mix 64% of you said you wanted.</li>
+        <li><b>Made for your stage of life</b> — 45, 55, 65. This is the curriculum that starts where the old one stopped.</li>
+        <li><b>Medically reviewed, plainly written</b> — credible without the white coat.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="price-block">
+    <div class="was">$79 after the founding cohort</div>
+    <div class="now">$49</div>
+    <div class="terms">one-time · lifetime access · every future lesson included · no subscription, ever</div>
+  </div>
+  <a class="cta" href="#submit-form">START LESSON ONE TONIGHT<small>Instant access · read, listen or watch · 30-day guarantee</small></a>
+  <p class="under-cta">Discreet billing · discreet inbox · downloadable audio</p>
+
+  <h2>What 1,062 Women Told Us</h2>
+  <p style="text-align:center;color:var(--ink-soft)">We asked our customers one question: <em>what do you actually want to know that nobody will tell you?</em> These are their words, shared anonymously, exactly as promised.</p>
+  <div class="quote">"Why does orgasm take longer and longer — and why will nobody explain it?"<span class="who">Survey respondent, 55+</span></div>
+  <div class="quote">"I'm on HRT and I got my libido back. But it doesn't help the brain. What helps the brain?"<span class="who">Survey respondent, 45–54</span></div>
+  <div class="quote">"Is my antidepressant the reason I can't finish?"<span class="who">Survey respondent, 45–54</span></div>
+  <div class="quote">"Is sex over for me? How do I still feel sexy when I actually feel anything but?"<span class="who">Survey respondent, 55+</span></div>
+
+  <h2>What Actually Changes After 40 (That Nobody Explains)</h2>
+  <div class="mechanism">
+    <h3>It isn't just hormones — and that's the part everyone gets wrong.</h3>
+    <p>HRT can hand your hormones back and still leave desire flat, because desire after 40 runs on a different system than it did at 25: <b>responsive, not spontaneous</b>. It shows up after the right signals, not before them. Nobody taught us that, so millions of women are waiting for a mood that isn't coming — and concluding something is wrong with them.</p>
+    <p style="margin:0">Nothing is wrong with you. You were handed a curriculum that ended twenty years too early. The Second Curriculum teaches the system you actually have now — how orgasm changes and what works, where desire actually comes from, and what to do about the parts medicine can name but never explains kindly.</p>
+  </div>
+
+  <h2>Inside The Second Curriculum: Your Four-Part Path</h2>
+  <div class="path">
+    <div class="step"><span class="num"></span><div><h3>Your Body, Now</h3><p>The re-introduction nobody gave you: what actually changed, the anatomy you were never taught, comfort solved kindly, and what HRT and your medications do — and don't — fix.</p><div class="lessons">Lessons 1–4</div></div></div>
+    <div class="step"><span class="num"></span><div><h3>The Orgasm Work</h3><p>The part most women come for. Why orgasm gets harder with age, stronger and deeper orgasms (the single most-requested lesson), what your body can really do, and staying present when your head won't shut up.</p><div class="lessons">Lessons 5–8</div></div></div>
+    <div class="step"><span class="num"></span><div><h3>Desire</h3><p>Wanting to want it again: why desire fades, rebuilding the relationship with your own desire, stress and meds versus your libido, and desire after 50.</p><div class="lessons">Lessons 9–12</div></div></div>
+    <div class="step"><span class="num"></span><div><h3>Together</h3><p>Mismatched drives without the blame, saying it out loud after twenty years, his body and his changes without making it weird, and reigniting a long marriage.</p><div class="lessons">Lessons 13–16</div></div></div>
+  </div>
+
+  <a class="cta" href="#submit-form">GET ALL 16 LESSONS — $49<small>Founding cohort price · lifetime access</small></a>
+
+  <h2>Checked By Doctors. Written By 1,062 Women. Owned By You.</h2>
+  <p>There's no guru on the cover of this program, and that's deliberate. When we asked who you wanted to learn from, famous doctors came dead last. What won, by a landslide: <b>experts for the facts, real women for the honesty.</b></p>
+  <p>So that's how every lesson is built: a plain-language answer developed with clinicians who specialize in this stage of life — a menopause physician, an intimacy educator, a pelvic floor physiotherapist — wrapped in the real words of women who asked the same question you did. Reviewed for accuracy. Written like a knowledgeable friend, never a lecture.</p>
+
+  <h2>Here's What Happens After You Join</h2>
+  <div class="receipts">
+    <ul>
+      <li><b>Lesson one arrives immediately</b> — read it tonight in 20 minutes, or play the audio version with nothing on your screen.</li>
+      <li><b>A new lesson unlocks each week</b> (or binge the library — you told us you wanted to pick, so both work).</li>
+      <li><b>One practical thing to try each week</b> — small, private, doable.</li>
+      <li><b>Your questions keep shaping it</b> — every lesson ends with a You Asked box, and the most-asked questions become new lessons, free, forever.</li>
+    </ul>
+  </div>
+
+  <h2>Who This Is NOT For</h2>
+  <div class="notfor">
+    <ul>
+      <li>If you're looking for explicit content, this will disappoint you — it's honest, warm and grown-up, never graphic.</li>
+      <li>If you want a medical diagnosis, see your clinician — we'll even give you the exact questions worth asking them.</li>
+      <li>If everything about your sex life already feels answered — genuinely, wonderful. Send this to a friend who's still wondering.</li>
+    </ul>
+  </div>
+
+  <h2>"What If It Doesn't Work For Me?"</h2>
+  <div class="guarantee">
+    <h3>The 30-Day Lesson-One Guarantee</h3>
+    <p style="margin:0">Take a month. Read, listen, try the practices. If you don't feel like the curriculum is finally speaking to you — your body, your stage, your questions — write to us within 30 days and we'll refund you in full. Keeping your trust matters more to us than keeping $49.</p>
+  </div>
+
+  <h2>With The Second Curriculum, You're Getting…</h2>
+  <ul class="stack">
+    <li><span>All 16 lessons — written, audio, and private video versions</span><b>$316 value</b></li>
+    <li><span>The You Asked bank — 738 real questions, answered</span><b>$79 value</b></li>
+    <li><span>Weekly practice cards — one private thing to try each week</span><b>$49 value</b></li>
+    <li><span>Every future lesson and update, free forever</span><b>$99 value</b></li>
+    <li><span>Founding member badge + your replies shape the final lessons</span><b>—</b></li>
+  </ul>
+  <p style="text-align:center;font-weight:600">Over $540 of value — founding cohort price: <span style="color:var(--pink-deep);font-family:'Fraunces',serif;font-size:22px;font-weight:700">$49, once.</span></p>
+
+  <div id="submit-form">
+    <h2>Join The Founding Cohort</h2>
+    <p style="text-align:center;color:var(--ink-soft);font-size:14.5px">Enter your email to start — checkout takes under a minute. Discreet billing, discreet everything.</p>
+    <form onsubmit="return false">
+      <input type="email" placeholder="Your email address" required>
+      <button>START THE SECOND CURRICULUM — $49</button>
+    </form>
+    <p class="form-note">One-time payment · lifetime access · 30-day guarantee · price returns to $79 when the founding cohort closes</p>
+  </div>
+
+  <details class="faq"><summary>Is this a subscription?</summary><div class="a">No. One payment of $49 (founding price), lifetime access, every future lesson included. Our customers told us they were done with subscriptions, so we didn't build one.</div></details>
+  <details class="faq"><summary>Do I need a partner to do this?</summary><div class="a">No. Parts I–III are entirely about you. Part IV is for the two of you, and works whether you've been together twenty years or twenty days.</div></details>
+  <details class="faq"><summary>Is this medical advice?</summary><div class="a">No — it's education, medically reviewed by clinicians who specialize in this stage of life. It works alongside your GP, your menopause care, and your therapy, and tells you clearly when those are the right door.</div></details>
+  <details class="faq"><summary>I'm on HRT / antidepressants. Is it still for me?</summary><div class="a">Especially for you — the medication questions were among the most asked of all 738. Lesson 4 covers exactly what medication does and doesn't change, and everything else is built to work alongside it.</div></details>
+  <details class="faq"><summary>Will anyone know I bought this?</summary><div class="a">Discreet billing descriptor, discreet email subject lines, no autoplaying video, downloadable audio. Built for privacy from the first click.</div></details>
+  <details class="faq"><summary>Is it explicit?</summary><div class="a">No. Honest and specific, never graphic. Safe to read on a train, safe to leave open on your laptop.</div></details>
+
+  <a class="cta" href="#submit-form">JOIN THE FOUNDING COHORT — $49<small>Instant access · lifetime · 30-day guarantee</small></a>
+
+</div>
+
+<footer>
+  © Nancy · Nancy School · <a href="https://hellonancy.com" style="color:inherit">hellonancy.com</a><br>
+  Survey statistics from 1,062 customer responses, August 2026. All verbatims anonymous, as promised.<br>
+  Educational content only; this program does not provide medical advice, diagnosis, or treatment.
+</footer>
+
+</body>
+</html>
